@@ -8,7 +8,7 @@ type NavItem = { label: string; href: string };
 export default function Header() {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const about: NavItem[] = [
     { label: "About Us", href: "/about" },
